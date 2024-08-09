@@ -20,3 +20,15 @@ void Soldiers::vivificaMemento (Memento * mem)
     this->amountOfSoldiersPerUnit = mem->getAmountOfSoldiersPerUnit();
     this->unitName = mem->getUnitName();
 }
+
+void Soldiers::engage()
+{
+    this->prepare();
+    this->execute();
+}
+
+void Soldiers::disengage()
+{
+    this->retreat();
+    this->rest();
+}

@@ -15,17 +15,15 @@ class Infantry : public Soldiers
         int amountOfSoldiersPerUnit;
         std::string unitName;
         
-        void prepare();
-        void execute();
-        void retreat();
-        void rest();
+        void prepare() override;
+        void execute() override;
+        void retreat() override;
+        void rest() override;
     public:
         Infantry(); //added
         Soldiers* clonis() override;
-        void engage() override;
-        void disengage() override;
-        Memento* militusMemento();
-        void vivificaMemento(Memento* mem);
+        void engage();
+        void disengage();
 };
 
 #endif

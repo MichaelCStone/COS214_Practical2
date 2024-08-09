@@ -14,10 +14,10 @@ class Soldiers
         int amountOfSoldiersPerUnit;
         std::string unitName;
 
-        virtual void prepare();
-        virtual void execute();
-        virtual void retreat();
-        virtual void rest();
+        virtual void prepare() = 0;
+        virtual void execute() = 0;
+        virtual void retreat() = 0;
+        virtual void rest() = 0;
     public:
         virtual Soldiers* clonis() = 0;
         virtual void engage();

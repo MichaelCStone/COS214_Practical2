@@ -22,10 +22,8 @@ class ShieldBearer : public Soldiers
     public:
         ShieldBearer(); //added
         Soldiers* clonis() override;
-        void engage() override;
-        void disengage() override;
-        Memento* militusMemento();
-        void vivificaMemento(Memento* mem);
+        void engage();
+        void disengage();
 };
 
 #endif
