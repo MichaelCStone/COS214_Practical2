@@ -32,7 +32,7 @@ class Soldiers
         int getDamagePerSoldier() const {return damagePerSoldier;} //added
         int getDefencePerSoldier() const {return defencePerSoldier;} //added
         int getAmountOfSoldiersPerUnit() const {return amountOfSoldiersPerUnit;} //added
-        std::string getUnitName() {return unitName;} //added
+        std::string getUnitName() const {return unitName;} //added
 };
 
 #endif
