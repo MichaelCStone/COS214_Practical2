@@ -13,6 +13,7 @@ class Soldiers
         int defencePerSoldier;
         int amountOfSoldiersPerUnit;
         std::string unitName;
+
         virtual void prepare();
         virtual void execute();
         virtual void retreat();
@@ -23,6 +24,12 @@ class Soldiers
         virtual void disengage();
         Memento* militusMemento();
         void vivificaMemento(Memento* mem);
+
+        int getHealthPerSoldier() const {return healthPerSoldier;}
+        int getDamagePerSoldier() const {return damagePerSoldier;}
+        int getDefencePerSoldier() const {return defencePerSoldier;}
+        int getAmountOfSoldiersPerUnit() const {return amountOfSoldiersPerUnit;}
+        std::string getUnitName() {return unitName;}
 };
 
 #endif

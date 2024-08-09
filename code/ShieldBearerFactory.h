@@ -9,10 +9,10 @@ class ShieldBearerFactory : public SoldierFactory
     // private:
     //     Soldiers* soldiers;
     public: 
-        Soldiers* createUnit();
-        int calculateTotalHealthPerUnit();
-        int calculateTotalDamagePerUnit();
-        int TotalDefensePerUnit();
+        Soldiers* createUnit() override;
+        int calculateTotalHealthPerUnit() override;
+        int calculateTotalDamagePerUnit() override;
+        int calculateTotalDefensePerUnit() override;
 };
 
 #endif
