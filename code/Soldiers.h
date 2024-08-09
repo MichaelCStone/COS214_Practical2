@@ -19,17 +19,20 @@ class Soldiers
         virtual void retreat();
         virtual void rest();
     public:
-        virtual Soldiers* clonis();
+        virtual Soldiers* clonis() = 0;
         virtual void engage();
         virtual void disengage();
         Memento* militusMemento();
         void vivificaMemento(Memento* mem);
 
-        int getHealthPerSoldier() const {return healthPerSoldier;}
-        int getDamagePerSoldier() const {return damagePerSoldier;}
-        int getDefencePerSoldier() const {return defencePerSoldier;}
-        int getAmountOfSoldiersPerUnit() const {return amountOfSoldiersPerUnit;}
-        std::string getUnitName() {return unitName;}
+        Soldiers(int health, int damage, int defense, int numSoldiers, std::string name); //added
+        virtual ~Soldiers() = default; //added
+
+        int getHealthPerSoldier() const {return healthPerSoldier;} //added
+        int getDamagePerSoldier() const {return damagePerSoldier;} //added
+        int getDefencePerSoldier() const {return defencePerSoldier;} //added
+        int getAmountOfSoldiersPerUnit() const {return amountOfSoldiersPerUnit;} //added
+        std::string getUnitName() {return unitName;} //added
 };
 
 #endif

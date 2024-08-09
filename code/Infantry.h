@@ -14,14 +14,16 @@ class Infantry : public Soldiers
         int defencePerSoldier;
         int amountOfSoldiersPerUnit;
         std::string unitName;
+        
         void prepare();
         void execute();
         void retreat();
         void rest();
     public:
-        Soldiers* clonis();
-        void engage();
-        void disengage();
+        Infantry(); //added
+        Soldiers* clonis() override;
+        void engage() override;
+        void disengage() override;
         Memento* militusMemento();
         void vivificaMemento(Memento* mem);
 };
