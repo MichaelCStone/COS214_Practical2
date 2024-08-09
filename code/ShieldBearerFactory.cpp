@@ -9,15 +9,21 @@ Soldiers* ShieldBearerFactory::createUnit()
 
 int ShieldBearerFactory::calculateTotalHealthPerUnit()
 {
-    return getSoldiers()->getHealthPerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    //return getSoldiers()->getHealthPerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+
+    return soldiers->getHealthPerSoldier() * soldiers->getAmountOfSoldiersPerUnit();
 }
 
 int ShieldBearerFactory::calculateTotalDamagePerUnit()
 {
-    return getSoldiers()->getDamagePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    //return getSoldiers()->getDamagePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+
+    return soldiers->getDamagePerSoldier() * soldiers->getAmountOfSoldiersPerUnit();
 }
 
 int ShieldBearerFactory::calculateTotalDefensePerUnit()
 {
-    return getSoldiers()->getDefencePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    //return getSoldiers()->getDefencePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+
+    return soldiers->getDefencePerSoldier() * soldiers->getAmountOfSoldiersPerUnit();
 }

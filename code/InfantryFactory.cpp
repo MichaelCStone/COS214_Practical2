@@ -9,15 +9,15 @@ Soldiers* InfantryFactory::createUnit()
 
 int InfantryFactory::calculateTotalHealthPerUnit()
 {
-    return getSoldiers()->getHealthPerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    return /*getSoldiers()*/soldiers->getHealthPerSoldier() * /*getSoldiers()*/soldiers->getAmountOfSoldiersPerUnit();
 }
 
 int InfantryFactory::calculateTotalDamagePerUnit()
 {
-    return getSoldiers()->getDamagePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    return /*getSoldiers()*/soldiers->getDamagePerSoldier() * /*getSoldiers()*/soldiers->getAmountOfSoldiersPerUnit();
 }
 
 int InfantryFactory::calculateTotalDefensePerUnit()
 {
-    return getSoldiers()->getDefencePerSoldier() * getSoldiers()->getAmountOfSoldiersPerUnit();
+    return /*getSoldiers()*/soldiers->getDefencePerSoldier() * /*getSoldiers()*/soldiers->getAmountOfSoldiersPerUnit();
 }
