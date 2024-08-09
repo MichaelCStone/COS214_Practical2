@@ -6,3 +6,14 @@ Soldiers::Soldiers(int health, int damage, int defense, int numSoldiers, std::st
 
 }
 
+void Soldiers::engage()
+{
+    this->prepare();
+    this->execute();
+}
+
+void Soldiers::disengage()
+{
+    this->retreat();
+    this->rest();
+}
