@@ -20,17 +20,17 @@ void Soldiers::vivificaMemento (Memento * mem)
     this->unitName = mem->getUnitName();
 }
 
-void Soldiers::engage()
-{
-    this->prepare();
-    this->execute();
-}
+// void Soldiers::engage()
+// {
+//     this->prepare();
+//     this->execute();
+// }
 
-void Soldiers::disengage()
-{
-    this->retreat();
-    this->rest();
-}
+// void Soldiers::disengage()
+// {
+//     this->retreat();
+//     this->rest();
+// }
 
 void Soldiers::setHealthPerSoldier(int newHealth)
 {
@@ -41,4 +41,3 @@ void Soldiers::setAmountOfSoldiersPerUnit(int newAmount)
 {
     this->amountOfSoldiersPerUnit = newAmount;
 }
-
