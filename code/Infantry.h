@@ -2,7 +2,7 @@
 #define INFANTRY_H
 
 #include <string>
-#include <iostream> //dunno if need cuz of string
+#include <iostream>
 #include "Soldiers.h"
 #include "Memento.h"
 
@@ -22,8 +22,8 @@ class Infantry : public Soldiers
     public:
         Infantry(); //added
         Soldiers* clonis() override;
-        void engage();
-        void disengage();
+        void engage() override;
+        void disengage() override;
 };
 
 #endif

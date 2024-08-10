@@ -22,7 +22,13 @@ int main()
 
     armies[0] = fact[0]->create();
 
+    std::cout << "Infantry methods:-------------------------------------------------------------------------------------"<<std::endl;
     armies[0]->engage();
+    armies[0]->disengage();
 
-    std::cout<<armies[0]->getDamagePerSoldier();
+    std::cout << "Damage: " << armies[0]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[0]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
 }

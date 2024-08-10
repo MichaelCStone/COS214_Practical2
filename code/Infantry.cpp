@@ -22,27 +22,33 @@ Soldiers* Infantry::clonis()
 
 void Infantry::engage() //: Soldiers
 {
-    std::cout<<"Infantry is engaging by unsheating their swords and charging with their horses."<<std::endl;
+    //std::cout<<"Infantry is engaging by unsheating their swords and charging with their horses."<<std::endl;
+
+    this->prepare();
+    this->execute();
 }
 
 void Infantry::disengage()
 {
-    std::cout<<"Infantry is disengaging by holstering their swords."<<std::endl;
+    //std::cout<<"Infantry is disengaging by holstering their swords."<<std::endl;
+
+    this->retreat();
+    this->rest();
 }
 
 void Infantry::prepare()
 {
-    std::cout<<"Infantry is preparing by forming tight formations with their horses."<<std::endl;
+    std::cout<<"Infantry is preparing by forming tight formations with their horses and unsheathing their swords."<<std::endl;
 }
 
 void Infantry::execute()
 {
-    std::cout<<"Infantry is executing by slashing their swords at the enemy."<<std::endl;
+    std::cout<<"Infantry is executing by charging their horses and slashing their swords at the enemy."<<std::endl;
 }
 
 void Infantry::retreat()
 {
-    std::cout<<"Infantry is retreating by riding their horses."<<std::endl;
+    std::cout<<"Infantry is retreating by holstering their swords and riding their horses."<<std::endl;
 }
 
 void Infantry::rest()

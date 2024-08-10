@@ -20,8 +20,8 @@ class Soldiers
         virtual void rest() = 0;
     public:
         virtual Soldiers* clonis() = 0;
-        virtual void engage();
-        virtual void disengage();
+        virtual void engage() = 0;
+        virtual void disengage() = 0;
         Memento* militusMemento();
         void vivificaMemento(Memento* mem);
 
