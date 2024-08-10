@@ -14,15 +14,21 @@ using namespace std;
 
 int main() 
 {
-    SoldierFactory* fact[3];
+    SoldierFactory* factory[3];
 
-    fact[0] = new InfantryFactory();
+    factory[0] = new InfantryFactory();
+    factory[1] = new ShieldBearerFactory();
+    factory[2] = new BoatmanFactory();
 
     Soldiers* armies[3];
 
-    armies[0] = fact[0]->create();
+    for(int k=0; k<3; k++)
+    {
+        armies[k] = factory[k]->create();
+    }
 
     std::cout << "Infantry methods:-------------------------------------------------------------------------------------"<<std::endl;
+    
     armies[0]->engage();
     armies[0]->disengage();
 
@@ -31,4 +37,38 @@ int main()
     std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
     std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
     std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
+
+    std::cout<<std::endl;
+
+    std::cout << "ShieldBearer methods:-------------------------------------------------------------------------------------"<<std::endl;
+    
+    armies[1]->engage();
+    armies[1]->disengage();
+
+    std::cout << "Damage: " << armies[1]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[1]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[1]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[1]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[1]->getUnitName() << std::endl;
+
+    std::cout<<std::endl;
+
+    std::cout << "Boatman methods:-------------------------------------------------------------------------------------"<<std::endl;
+    
+    armies[2]->engage();
+    armies[2]->disengage();
+
+    std::cout << "Damage: " << armies[2]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[2]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[2]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[2]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[2]->getUnitName() << std::endl;
+
+    for(int k=0; k<3; k++)
+    {
+        delete armies[k];
+        armies[k] = nullptr;
+        delete factory[k];
+        factory[k] = nullptr;
+    }
 }

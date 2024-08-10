@@ -22,12 +22,18 @@ Soldiers* ShieldBearer::clonis()
 
 void ShieldBearer::engage() //: Soldiers
 {
-    std::cout<<"ShieldBearer is engaging by forming a wall with their shields."<<std::endl;
+    //std::cout<<"ShieldBearer is engaging by forming a wall with their shields."<<std::endl;
+
+    this->prepare();
+    this->execute();
 }
 
 void ShieldBearer::disengage()
 {
-    std::cout<<"ShieldBearer is disengaging by picking up their shields."<<std::endl;
+    //std::cout<<"ShieldBearer is disengaging by picking up their shields."<<std::endl;
+
+    this->retreat();
+    this->rest();
 }
 
 void ShieldBearer::prepare()
@@ -42,7 +48,7 @@ void ShieldBearer::execute()
 
 void ShieldBearer::retreat()
 {
-    std::cout<<"ShieldBearer is retreating by walking away."<<std::endl;
+    std::cout<<"ShieldBearer is retreating by picking up their shields and walking away."<<std::endl;
 }
 
 void ShieldBearer::rest()

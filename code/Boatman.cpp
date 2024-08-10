@@ -22,17 +22,23 @@ Soldiers* Boatman::clonis()
 
 void Boatman::engage() //: Soldiers
 {
-    std::cout<<"Boatman is engaging by drawing their bows with flaming arrows."<<std::endl;
+    //std::cout<<"Boatman is engaging by drawing their bows with flaming arrows."<<std::endl;
+
+    this->prepare();
+    this->execute();
 }
 
 void Boatman::disengage()
 {
-    std::cout<<"Boatman is disengaging by lowering their bows."<<std::endl;
+    //std::cout<<"Boatman is disengaging by lowering their bows."<<std::endl;
+
+    this->retreat();
+    this->rest();
 }
 
 void Boatman::prepare()
 {
-    std::cout<<"Boatman is preparing by moving their boats to flanking positions and readying their bows."<<std::endl;
+    std::cout<<"Boatman is preparing by moving their boats to flanking positions and drawing their bows."<<std::endl;
 }
 
 void Boatman::execute()
@@ -42,7 +48,7 @@ void Boatman::execute()
 
 void Boatman::retreat()
 {
-    std::cout<<"Boatman is retreating by sailing their boats away."<<std::endl;
+    std::cout<<"Boatman is retreating by lowering their bows and sailing their boats away."<<std::endl;
 }
 
 void Boatman::rest()

@@ -2,7 +2,7 @@
 #define SHIELDBEARER_H
 
 #include <string>
-#include <iostream> //dunno if need cuz of string
+#include <iostream>
 #include "Soldiers.h"
 #include "Memento.h"
 
@@ -15,15 +15,15 @@ class ShieldBearer : public Soldiers
         int amountOfSoldiersPerUnit;
         std::string unitName;
 
-        void prepare();
-        void execute();
-        void retreat();
-        void rest();
+        void prepare() override;
+        void execute() override;
+        void retreat() override;
+        void rest() override;
     public:
         ShieldBearer(); //added
         Soldiers* clonis() override;
-        void engage();
-        void disengage();
+        void engage() override;
+        void disengage() override;
 };
 
 #endif
