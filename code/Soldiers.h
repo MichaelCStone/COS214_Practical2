@@ -33,6 +33,16 @@ class Soldiers
         int getDefencePerSoldier() const {return defencePerSoldier;} //added
         int getAmountOfSoldiersPerUnit() const {return amountOfSoldiersPerUnit;} //added
         std::string getUnitName() const {return unitName;} //added
+
+        void setHealthPerSoldier(int health);
+        void setAmountOfSoldiersPerUnit(int amount);
+        // only these 2 need to be set because the others won't be affected (:
+        
+
+        //10 soldiers = 1000 hp
+        //i do 350 damage
+        //300 damage = 3 soldiers dead
+        //50/7 = health per soldier = 100 - 7 = 93 hp per soldier in unit
 };
 
 #endif

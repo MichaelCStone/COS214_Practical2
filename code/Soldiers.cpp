@@ -32,3 +32,13 @@ void Soldiers::disengage()
     this->retreat();
     this->rest();
 }
+
+void Soldiers::setHealthPerSoldier(int newHealth)
+{
+    this->healthPerSoldier = newHealth;
+}
+
+void Soldiers::setAmountOfSoldiersPerUnit(int newAmount)
+{
+    this->amountOfSoldiersPerUnit = newAmount;
+}
