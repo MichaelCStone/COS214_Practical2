@@ -17,6 +17,8 @@ class SoldierFactory
     public: 
         virtual ~SoldierFactory() {delete soldiers;} //added
         //SoldierFactory() : soldiers(createUnit()){} //added
+
+        Soldiers* create();
 };
 
 #endif
