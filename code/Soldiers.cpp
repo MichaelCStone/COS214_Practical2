@@ -6,6 +6,11 @@ Soldiers::Soldiers(int health, int damage, int defense, int numSoldiers, std::st
 
 }
 
+Memento * Soldiers::militusMemento()
+{
+    return new Memento(this->healthPerSoldier, this->damagePerSoldier, this->defencePerSoldier, this->amountOfSoldiersPerUnit, this->unitName);
+}
+
 void Soldiers::vivificaMemento (Memento * mem)
 {
     this->healthPerSoldier = mem->getHealthPerSoldier();
