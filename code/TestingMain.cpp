@@ -39,9 +39,21 @@ int main()
     std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
     std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
 
-    std::cout<<std::endl;
+    std::cout<<"\nTesting Clonis for Infantry------------------------------------------------------------------------------------------"<<std::endl;
 
-    std::cout << "ShieldBearer methods:-------------------------------------------------------------------------------------"<<std::endl;
+    Soldiers* InfantryClone = armies[0]->clonis();
+
+    std::cout<<"\nprint clone's attributes:"<<std::endl;
+
+    std::cout << "Damage: " << InfantryClone->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << InfantryClone->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << InfantryClone->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << InfantryClone->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << InfantryClone->getUnitName() << std::endl;
+
+    delete InfantryClone;
+
+    std::cout << "\nShieldBearer methods:-------------------------------------------------------------------------------------"<<std::endl;
     
     armies[1]->engage();
     armies[1]->disengage();
@@ -52,9 +64,21 @@ int main()
     std::cout << "Amount Of Soldiers: " << armies[1]->getAmountOfSoldiersPerUnit() << std::endl;
     std::cout << "Unit Name: " << armies[1]->getUnitName() << std::endl;
 
-    std::cout<<std::endl;
+    std::cout<<"\nTesting Clonis for ShieldBearer------------------------------------------------------------------------------------------"<<std::endl;
 
-    std::cout << "Boatman methods:-------------------------------------------------------------------------------------"<<std::endl;
+    Soldiers* ShieldBearerClone = armies[1]->clonis();
+
+    std::cout<<"\nprint clone's attributes:"<<std::endl;
+
+    std::cout << "Damage: " << ShieldBearerClone->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << ShieldBearerClone->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << ShieldBearerClone->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << ShieldBearerClone->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << ShieldBearerClone->getUnitName() << std::endl;
+
+    delete ShieldBearerClone;
+
+    std::cout << "\nBoatman methods:-------------------------------------------------------------------------------------"<<std::endl;
     
     armies[2]->engage();
     armies[2]->disengage();
@@ -66,19 +90,20 @@ int main()
     std::cout << "Unit Name: " << armies[2]->getUnitName() << std::endl;
 
 
-    std::cout<<"\nTesting Clonis------------------------------------------------------------------------------------------"<<std::endl;
+    std::cout<<"\nTesting Clonis for Boatman------------------------------------------------------------------------------------------"<<std::endl;
 
-    Soldiers* clone = armies[2]->clonis();
+    Soldiers* BoatmanClone = armies[2]->clonis();
 
     std::cout<<"\nprint clone's attributes:"<<std::endl;
 
-    std::cout << "Damage: " << clone->getDamagePerSoldier() << std::endl;
-    std::cout << "Health: " << clone->getHealthPerSoldier() << std::endl;
-    std::cout << "Defense: " << clone->getDefencePerSoldier() << std::endl;
-    std::cout << "Amount Of Soldiers: " << clone->getAmountOfSoldiersPerUnit() << std::endl;
-    std::cout << "Unit Name: " << clone->getUnitName() << std::endl;
+    std::cout << "Damage: " << BoatmanClone->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << BoatmanClone->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << BoatmanClone->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << BoatmanClone->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << BoatmanClone->getUnitName() << std::endl;
 
-    delete clone;
+    delete BoatmanClone;
+
     //TESTING MEMENTO
     std::cout << "\nMemento methods on Infantry:--------------------------------------------------------------------------"<<std::endl;
     
