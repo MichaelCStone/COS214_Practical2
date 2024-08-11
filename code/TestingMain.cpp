@@ -66,8 +66,19 @@ int main()
     std::cout << "Unit Name: " << armies[2]->getUnitName() << std::endl;
 
 
+    std::cout<<"\nTesting Clonis------------------------------------------------------------------------------------------"<<std::endl;
 
+    Soldiers* clone = armies[2]->clonis();
 
+    std::cout<<"\nprint clone's attributes:"<<std::endl;
+
+    std::cout << "Damage: " << clone->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << clone->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << clone->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << clone->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << clone->getUnitName() << std::endl;
+
+    delete clone;
     //TESTING MEMENTO
     std::cout << "\nMemento methods on Infantry:--------------------------------------------------------------------------"<<std::endl;
     
