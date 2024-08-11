@@ -14,6 +14,7 @@ class CareTaker
         Memento * getMemento(int index);
         void addMemento(Memento *);
         Memento * getLastMemento();
+        ~CareTaker();
 };
 
 #endif

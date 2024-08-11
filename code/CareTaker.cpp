@@ -29,3 +29,13 @@ Memento * CareTaker::getLastMemento()
 
     return nullptr;
 }
+
+CareTaker::~CareTaker()
+{
+    for (Memento * memento : this->mementos)
+    {
+        delete memento;
+    }
+
+    this->mementos.clear();
+}

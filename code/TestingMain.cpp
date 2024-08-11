@@ -6,6 +6,7 @@
 #include "Infantry.h"
 #include "ShieldBearer.h"
 #include "Boatman.h"
+#include "CareTaker.h"
 
 #include <iostream>
 #include <string>
@@ -64,6 +65,56 @@ int main()
     std::cout << "Amount Of Soldiers: " << armies[2]->getAmountOfSoldiersPerUnit() << std::endl;
     std::cout << "Unit Name: " << armies[2]->getUnitName() << std::endl;
 
+
+
+
+    //TESTING MEMENTO
+    std::cout << "\nMemento methods on Infantry:--------------------------------------------------------------------------"<<std::endl;
+    
+    CareTaker careTaker;
+
+    careTaker.addMemento(armies[0]->militusMemento());
+
+    std::cout << "State of object before changes:"<<std::endl;
+    std::cout << "Damage: " << armies[0]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[0]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
+
+    armies[0]->setHealthPerSoldier(80);
+    armies[0]->setAmountOfSoldiersPerUnit(37);
+
+    careTaker.addMemento(armies[0]->militusMemento());
+
+    std::cout << "\nState of object after changes:"<<std::endl;
+    std::cout << "Damage: " << armies[0]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[0]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
+
+    armies[0]->vivificaMemento(careTaker.getMemento(0));
+
+    std::cout << "\nState of object after being restored:"<<std::endl;
+    std::cout << "Damage: " << armies[0]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[0]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
+
+    armies[0]->vivificaMemento(careTaker.getLastMemento());
+
+    std::cout << "\nGet the last memento which will be after changes again:"<<std::endl;
+    std::cout << "Damage: " << armies[0]->getDamagePerSoldier() << std::endl;
+    std::cout << "Health: " << armies[0]->getHealthPerSoldier() << std::endl;
+    std::cout << "Defense: " << armies[0]->getDefencePerSoldier() << std::endl;
+    std::cout << "Amount Of Soldiers: " << armies[0]->getAmountOfSoldiersPerUnit() << std::endl;
+    std::cout << "Unit Name: " << armies[0]->getUnitName() << std::endl;
+
+    //destructor for careTaker or memento? valgrind shows we are not freeing everything - done ("no leaks possible")
+
+    //DELETING OBJECTS
     for(int k=0; k<3; k++)
     {
         delete armies[k];
